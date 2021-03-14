@@ -1,0 +1,6 @@
+from dev_ws
+
+colcon build --packages-select deis_py_dev --symlink-install
+source ~/.bashrc
+
+ros2 run deis_py_dev sparkie
