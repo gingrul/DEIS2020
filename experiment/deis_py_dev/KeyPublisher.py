@@ -48,7 +48,8 @@ def main(args=None):
             msg = String()
             msg.data = ""+ str(dt_string) + ",3,"+str(speed)+" "+str(speed)+"\n" #set speed, from GPS, to robots with no platoon, all robots, speed should be 255 left wheel, 255 right wheel
             myKeySender.pubAction.publish(msg)
-            print ("sent command: ", msg.data)
+            #print ("sent command: ", msg.data)
+            myKeySender.get_logger().info('%s'  % (msg.data))
 
         elif(key== ord("b")):
             print ("Pressed b: Back")
@@ -56,7 +57,8 @@ def main(args=None):
             msg = String()
             msg.data = ""+ str(dt_string)  + ",3,"+str(-speed)+" "+str(-speed) +"\n"#set speed, from GPS, to robots with no platoon, all robots, speed should be -255 left wheel, -255 right wheel
             myKeySender.pubAction.publish(msg)
-            print ("sent command: ", msg.data)
+            #print ("sent command: ", msg.data)
+            myKeySender.get_logger().info('%s'  % (msg.data))
 
         elif(key== ord("l")):
             print ("Pressed l: Turn left")
@@ -64,7 +66,8 @@ def main(args=None):
             msg = String()
             msg.data = ""+ str(dt_string) + ",3,"+str(speed)+" "+str(0)+"\n" #set speed, from GPS, to robots with no platoon, all robots, speed should be 0 left wheel, 255 right wheel
             myKeySender.pubAction.publish(msg)
-            print ("sent command: ", msg.data)
+            #print ("sent command: ", msg.data)
+            myKeySender.get_logger().info('%s'  % (msg.data))
 
         elif(key== ord("r")):
             print ("Pressed r: Turn right")
@@ -73,7 +76,8 @@ def main(args=None):
             msg = String()
             msg.data = ""+ str(dt_string) + ",3,"+str(0)+" "+str(speed)+"\n" #set speed, from GPS, to robots with no platoon, all robots, speed should be 0 left wheel, 255 right wheel
             myKeySender.pubAction.publish(msg)
-            print ("sent command: ", msg.data)
+            #print ("sent command: ", msg.data)
+            myKeySender.get_logger().info('%s'  % (msg.data))
 
         elif(key== ord("s")):
             print ("Pressed s: Stop")
@@ -81,7 +85,8 @@ def main(args=None):
             msg = String()
             msg.data = ""+ str(dt_string) + ",3,0 0\n" #set speed, from GPS, to robots with no platoon, all robots, speed should be 0 left wheel, 0 right wheel
             myKeySender.pubAction.publish(msg)
-            print ("sent command: ", msg.data)
+            #print ("sent command: ", msg.data)
+            myKeySender.get_logger().info('%s'  % (msg.data))
          
         elif(key== ord("a")): #accelerate
             print ("Pressed a: Accelerate 3 forward for 20%")
@@ -93,7 +98,8 @@ def main(args=None):
             msg = String()
             msg.data = ""+ str(dt_string) + ",3,"+str(speed)+" "+str(speed)+"\n" #set speed, from GPS, to robots with no platoon, all robots, speed should be 0 left wheel, 0 right wheel
             myKeySender.pubAction.publish(msg)
-            print ("sent command: ", msg.data)
+            #print ("sent command: ", msg.data)
+            myKeySender.get_logger().info('%s'  % (msg.data))
             
         elif(key== ord("d")): #decelerate
             print ("Pressed d: Decelerate 3 forward for 10%")
@@ -102,7 +108,8 @@ def main(args=None):
             msg = String()
             msg.data = ""+ str(dt_string) + ",3,"+str(speed)+" "+str(speed)+"\n" #set speed, from GPS, to robots with no platoon, all robots, speed should be 0 left wheel, 0 right wheel
             myKeySender.pubAction.publish(msg)
-            print ("sent command: ", msg.data)
+            #print ("sent command: ", msg.data)
+            myKeySender.get_logger().info('%s'  % (msg.data))
             
         elif(key== ord("z")): #accelerate
             print ("Pressed z: Accelerate 1 forward for 10%")
@@ -114,7 +121,8 @@ def main(args=None):
             msg = String()
             msg.data = ""+ str(dt_string) + ",1,"+str(speed)+" "+str(speed)+"\n" #set speed, from GPS, to robots with no platoon, all robots, speed should be 0 left wheel, 0 right wheel
             myKeySender.pubAction.publish(msg)
-            print ("sent command: ", msg.data)
+            #print ("sent command: ", msg.data)
+            myKeySender.get_logger().info('%s'  % (msg.data))
             
         elif(key== ord("c")): #decelerate
             print ("Pressed c: Decelerate 1 forward for 10%")
@@ -123,7 +131,8 @@ def main(args=None):
             msg = String()
             msg.data = ""+ str(dt_string) + ",1,"+str(speed)+" "+str(speed)+"\n" #set speed, from GPS, to robots with no platoon, all robots, speed should be 0 left wheel, 0 right wheel
             myKeySender.pubAction.publish(msg)
-            print ("sent command: ", msg.data)
+            #print ("sent command: ", msg.data)
+            myKeySender.get_logger().info('%s'  % (msg.data))
             
             
         elif(key== ord("m")): #decelerate
@@ -132,7 +141,8 @@ def main(args=None):
             msg = String()
             msg.data = ""+ str(dt_string) + ",-2,"+str(speed)+" "+str(speed)+"\n" #set speed, from GPS, to robots with no platoon, all robots, speed should be 0 left wheel, 0 right wheel
             myKeySender.pubAction.publish(msg)
-            print ("sent command: ", msg.data)
+            #print ("sent command: ", msg.data)
+            myKeySender.get_logger().info('%s'  % (msg.data))
            
         elif(key== ord("n")):
             print ("Pressed n: ALL Stop")
@@ -140,8 +150,9 @@ def main(args=None):
             msg = String()
             msg.data = ""+ str(dt_string) + ",-2,0 0\n" #set speed, from GPS, to robots with no platoon, all robots, speed should be 0 left wheel, 0 right wheel
             myKeySender.pubAction.publish(msg)
-            print ("sent command: ", msg.data)
-            
+            #print ("sent command: ", msg.data)
+            myKeySender.get_logger().info('%s'  % (msg.data))
+           
             
         #else:
             #print ("Pressed .: GO STRAIGHT")
