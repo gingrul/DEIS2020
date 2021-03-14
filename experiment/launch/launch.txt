@@ -1,0 +1,4 @@
+from this directory:
+
+ros2 launch adjust_speed_putty_launch.py
+ros2 launch adjust_speed_putty_launch.py > output.txt
